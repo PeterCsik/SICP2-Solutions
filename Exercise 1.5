@@ -7,7 +7,7 @@
 
 ;; applicative-order evaluation ("All arguments to a function are evaluated before the function is applied.")
 
-;; The (test 0 (p)) would not give any result becuase the evaluation would be never terminated. Reason:
+;; The (test 0 (p)) would not give any result because the evaluation would be never terminated. Reason:
 
 ;; The function (define (p) (p)) is an example of a self-referential function, 
 ;; also known as a recursive function or an infinite loop.
@@ -18,7 +18,7 @@
 ;; leading to an infinite recursion.
 
 
-;; normal-order evaluation ("Arguments to a function are not evaluated until they are actually needed during the computation.")
+;; normal-order evaluation ("An argument to a function is not evaluated until it is actually needed during the computation.")
 
 ;;  The (test 0 (p)) would give 0 as results. Reason:
 
@@ -27,7 +27,8 @@
 ;; (if #true 0 y)
 ;; 0
 
-;; First of all, the first parameter "x" is replaced with the argument "0" and evaluated. 
+;; In the "if (= x 0) 0 y)" statement, "x" is the first paramater so it will be evaluated as first. 
+;; "x" is replaced with the argument "0" and evaluated. 
 ;; It returns #true which means according to the if statement that the result of the function is 0. 
-;; Therefore there is no need for any further evaluation, i. e. to replace the second paramter "y" with "(p)" argument
+;; Therefore there is no need to evaluate any other parameters, i. e. to replace the second parameter "y" with "(p)" argument
 ;; to find out a result. The result is arleady known.
