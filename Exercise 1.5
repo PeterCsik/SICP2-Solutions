@@ -27,5 +27,7 @@
 ;; (if #true 0 y)
 ;; 0
 
-;; There is no need to evaluate "(p)" to "y", because the condition "if (= x  0)" returns #true an so the result is "0".
-;; In case, the condition would return #false, then "y" would be replaced with "(p)" which is an infinite loop, never terminated.
+;; First of all, the first parameter "x" is replaced with the argument "0" and evaluated. 
+;; It returns #true which means according to the if statement that the result of the function is 0. 
+;; Therefore there is no need for any further evaluation, i. e. to replace the second paramter "y" with "(p)" argument
+;; to find out a result. The result is arleady known.
