@@ -1,1 +1,31 @@
-???
+(define (p) (p))
+
+(define (test x y)
+  (if (= x 0) 0 y))
+
+(test 0 (p))
+
+;; applicative-order evaluation ("All arguments to a function are evaluated before the function is applied.")
+
+;; The (test 0 (p)) would not give any result becuase the evaluation would be never terminated. Reason:
+
+;; The function (define (p) (p)) is an example of a self-referential function, 
+;; also known as a recursive function or an infinite loop.
+
+;; When this function is defined and called, it creates an infinite loop of function calls. 
+;; The function p is defined to call itself recursively without any base case or termination condition. 
+;; As a result, when you invoke the function (p), it will continue calling itself indefinitely, 
+;; leading to an infinite recursion.
+
+
+;; normal-order evaluation ("Arguments to a function are not evaluated until they are actually needed during the computation.")
+
+;;  The (test 0 (p)) would give 0 as results. Reason:
+
+;; (test 0 (p))
+;; (if (= 0 0) 0 y))
+;; (if #true 0 y)
+;; 0
+
+;; There is no need to evaluate "(p)" to "y", because the condition "if (= x  0)" returns #true an so the result is "0".
+;; In case, the condition would return #false, then "y" would be replaced with "(p)" which is an infinite loop, never terminated.
