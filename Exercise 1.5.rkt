@@ -6,7 +6,8 @@
 (test 0 (p))
 
 
-;; applicative-order evaluation ("All arguments to a function are evaluated before the function is applied.")
+;; -- applicative-order evaluation --
+;;("All arguments to a function are evaluated before the function is applied.")
 
 ;; The (test 0 (p)) would not give any result because the evaluation would be never terminated. Reason:
 
@@ -19,7 +20,8 @@
 ;; leading to an infinite recursion.
 
 
-;; normal-order evaluation ("An argument to a function is not evaluated until it is actually needed during the computation.")
+;; -- normal-order evaluation --
+;;("An argument to a function is not evaluated until it is actually needed during the computation.")
 
 ;;  The (test 0 (p)) would give 0 as results. Reason:
 
