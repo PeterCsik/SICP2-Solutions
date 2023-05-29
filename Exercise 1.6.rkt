@@ -20,7 +20,7 @@
 ;; If the predicate is evaluated to #false, then the alternative "(sqrt-iter (improve guess x) x"
 ;; is evaluated and then returns a result based on that evaluation.
 
-;; --- Using a Function ---
+;; --- Using a Function instead of "If" special form ---
 
 ;; If we replace 
 
@@ -35,7 +35,7 @@
 ;;       guess
 ;;      (sqrt-iter (improve guess x) x)))
 
-;; with a function
+;; with a new conditioanl function
 
 ;; (define (new-if predicate then-clause else-clause)
 ;;  (cond (predicate then-clause)
@@ -48,7 +48,7 @@
           guess
           (sqrt-iter (improve guess x) x)))
           
-;; the evaulation will be different compared to "if" special form.
+;; the evaulation will be different compared to the evaluation of the "if" special form.
 ;; It will evaluate all conditions first, including "good-enough? guess x" and 
 ;; "sqrt-iter (improve guess x) x" and only then will return a result.
 
@@ -56,6 +56,6 @@
           guess
           (sqrt-iter (improve guess x) x)))
           
-;; Since "sqrt-iter (improve guess x) x)))" is calling itself
+;; Since "sqrt-iter (improve guess x) x)))" is calling itself again and again,
 ;; it will create a loop that cannot be terminated. In other words, it will keep evaluating 
 ;; the whole "(sqrt-iter guess x)" function again and again and never returns a finite/final resut.
