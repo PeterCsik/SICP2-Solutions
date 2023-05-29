@@ -14,11 +14,11 @@
       guess
       (sqrt-iter (improve guess x) x)))
       
-;; "If" is a special form and it is evaluate as follows:
+;; "If" is a special form and it is evaluated as follows:
 ;; if the predicate "(good-enough? guess x)" is evaluated to #true
 ;; then it returns the consequent ("guess") as a result. 
-;; if the predicate is evaluated to #false, then the alternative "(sqrt-iter (improve guess x) x"
-;; is evaluated and then returns a results based on that evaluation.
+;; If the predicate is evaluated to #false, then the alternative "(sqrt-iter (improve guess x) x"
+;; is evaluated and then returns a result based on that evaluation.
 
 ;; --- Using a Function ---
 
