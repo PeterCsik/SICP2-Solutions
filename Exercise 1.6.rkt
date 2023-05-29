@@ -20,7 +20,6 @@
 ;; if the predicate is evaluated to #false, then the alternative "(sqrt-iter (improve guess x) x"
 ;; is evaluated and then returns a results based on that evaluation.
 
-
 ;; --- Using a Function ---
 
 ;; If we replace 
