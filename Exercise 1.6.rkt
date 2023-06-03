@@ -35,7 +35,7 @@
 ;;       guess
 ;;      (sqrt-iter (improve guess x) x)))
 
-;; with a new conditioanl function
+;; with a new conditional function
 
 ;; (define (new-if predicate then-clause else-clause)
 ;;  (cond (predicate then-clause)
