@@ -44,4 +44,4 @@
 
 --- Conclusion ---
 ;; The calcuclation in the alternative version returns a more precise result compared to the original version.
-;; The very large number such as 30404040405405040 are still a problem. There is no result of the calculation in both cases even after 3 mins.
+;; The very large numbers such as 30404040405405040 is still a problem. There is no result of the calculation in both cases even after 3 mins.
