@@ -8,3 +8,6 @@
   (if (good-enough? guess x)
       (improve guess x)                       
       (cube-root-iter (improve guess x) x)))
+
+(define (cube-root x)
+  (cube-root-iter 1.0 x))
