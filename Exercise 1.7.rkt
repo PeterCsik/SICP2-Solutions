@@ -4,7 +4,7 @@
 (define (improve guess x)
   (average guess (/ x guess)))
 
---- Original vesion (of the functions) ---
+;; --- Original vesion (of the functions) ---
 
 ;;(define (good-enough? guess x)
 ;;  (< (abs (- (* guess guess) x)) 0.0001))
@@ -14,7 +14,7 @@
 ;;      guess
 ;;      (sqrt-iter (improve guess x) x)))
 
---- Alternative version (of the functions) ---
+;; --- Alternative version (of the functions) ---
 
 (define (good-enough? guess x)
   (< (abs (- guess (improve guess x))) 0.000001))    ; the modified part
@@ -24,11 +24,15 @@
       (improve guess x)                              ; the modified part
       (sqrt-iter (improve guess x) x)))
 
---- Application ---
+(define (sqrt-function x)
+  (sqrt-iter 1.0 x))
 
-(sqrt-iter 0.0202 0.004040303030)
-(sqrt-iter 5858 856752211269)
-(sqrt-iter 30420 30404040405405040)
+
+;; --- Application ---
+
+(sqrt-function 0.004040303030)
+(sqrt-function 856752211269)
+(sqrt-function 30404040405405040)
 
 --- Results ---
 
