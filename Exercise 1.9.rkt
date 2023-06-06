@@ -1,22 +1,22 @@
 ;; Scheme
 
 (define (+ a b)
-  (if (= a 0)
-      b
-      (inc (+ (dec a) b))))
+ (if (= a 0)
+     b
+     (inc (+ (dec a) b))))
 
 (define (+ a b)
-  (if (= a 0)
-      b
-      (+ (dec a) (inc b))))
+ (if (= a 0)
+     b
+     (+ (dec a) (inc b))))
   
   
  ;; Racket
  
- (define (my-add1 a b)
-  (if (= a 0)
-      b
-      (add1 (my-add1 (sub1 a) b))))
+(define (my-add1 a b)
+ (if (= a 0)
+     b
+     (add1 (my-add1 (sub1 a) b))))
 
 (my-add1 4 5)
 (add1 (my-add1 3 5))
