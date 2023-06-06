@@ -11,13 +11,15 @@
      (+ (dec a) (inc b))))
   
   
- ;; Racket version
+;; Racket version
  
+;; The first procedure
 (define (my-add1 a b)
  (if (= a 0)
      b
      (add1 (my-add1 (sub1 a) b))))
 
+;; application
 (my-add1 4 5)
 (add1 (my-add1 3 5))
 (add1 (add1 (my-add1 (sub1 3) 5)))
@@ -31,11 +33,14 @@
 9
 ;; the process above is a linear recursive process
 
+
+;; The second procedure
 (define (my-add2 a b)
   (if (= a 0)
       b
       (my-add2 (sub1 a) (add1 b))))
-
+      
+;; applicaton
 (my-add2 4 5)
 (my-add2 3 6)
 (my-add2 2 7)
