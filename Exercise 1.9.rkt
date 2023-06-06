@@ -11,7 +11,7 @@
      (+ (dec a) (inc b))))
   
   
- ;; Racket
+ ;; Racket version
  
 (define (my-add1 a b)
  (if (= a 0)
@@ -29,8 +29,17 @@
 (add1 (add1 7))
 (add1 8)
 9
+;; the process above is a linear recursive process
 
 (define (my-add2 a b)
   (if (= a 0)
       b
       (my-add2 (sub1 a) (add1 b))))
+
+(my-add2 4 5)
+(my-add2 3 6)
+(my-add2 2 7)
+(my-add2 1 8)
+(my-add2 0 9)
+9
+;; the process above is a linear iterative process
