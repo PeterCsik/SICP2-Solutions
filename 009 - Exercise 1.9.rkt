@@ -21,9 +21,8 @@
 ;; application
 (my-add1 4 5)
 (add1 (my-add1 3 5))
-(add1 (add1 (my-add1 (sub1 3) 5)))
-(add1 (add1 (add1 (my-add1 (sub1 2) 5))))
-(add1 (add1 (add1 (add1 (my-add1 (sub1 1) 5)))))
+(add1 (add1 (my-add1 (sub1 2) 5)))
+(add1 (add1 (add1 (my-add1 (sub1 1) 5))))
 (add1 (add1 (add1 (add1 (my-add1 0 5)))))
 (add1 (add1 (add1 (add1 5))))
 (add1 (add1 (add1 6)))
