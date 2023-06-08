@@ -15,8 +15,7 @@
  
 ;; The first procedure
 (define (my-add1 a b)
- (if (= a 0)
-     b
+ (if (= a 0) b
      (add1 (my-add1 (sub1 a) b))))
 
 ;; application
@@ -36,8 +35,7 @@
 
 ;; The second procedure
 (define (my-add2 a b)
-  (if (= a 0)
-      b
+  (if (= a 0) b
       (my-add2 (sub1 a) (add1 b))))
       
 ;; applicaton
